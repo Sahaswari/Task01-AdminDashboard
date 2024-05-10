@@ -5,7 +5,7 @@
   <form class='ms-auto me-auto mt-3' style='width: 500px;'>
   <div class="mb-3">
     <label  class="form-label">Full Name</label>
-    <input type="email" class="form-control" name='name'>
+    <input type="name" class="form-control" name='name'>
     
   </div>
   <div class="mb-3">
