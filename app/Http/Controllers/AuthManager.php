@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -25,7 +25,7 @@ class AuthManager extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if(Auth::attemt($credentials)){
+        if(Auth::attempt($credentials)){
             return redirect()->intended(route('home'));
         }
         return redirect(route('login'))->with("error",'Login Details are not Valid');
@@ -49,5 +49,11 @@ class AuthManager extends Controller
         }
         return redirect(route('login'))->with("success",'Registration successful, login to the site');
         
+    }
+
+    function logout(){
+        Session::flash();
+        Auth::logout();
+        return redirect(route('login'));
     }
 }
