@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AuthManager extends Controller
 {
@@ -52,7 +53,7 @@ class AuthManager extends Controller
     }
 
     function logout(){
-        Session::flash();
+        Session::flash('logout_message', 'You have been logged out successfully.');
         Auth::logout();
         return redirect(route('login'));
     }
