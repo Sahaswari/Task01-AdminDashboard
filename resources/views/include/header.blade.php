@@ -9,18 +9,23 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+        @auth
+        <li class="nav-item">
+          <a class="nav-link" href="{{('logout')}}">LogOut</a>
+        </li>
+        @else
         <li class="nav-item">
           <a class="nav-link" href="{{route('login')}}">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{('registration')}}">Registration</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{('logout')}}">LogOut</a>
-        </li>
+        @endauth
       </ul>
       <span class="navbar-text">
-        Navbar text with an inline element
+        @auth
+        {{auth()->user()->name}}
+        @endauth
       </span>
     </div>
   </div>
