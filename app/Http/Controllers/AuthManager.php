@@ -12,14 +12,14 @@ class AuthManager extends Controller
 {
     function login(){
         if(Auth::check()){
-            return redirect(route('home'));
+            return redirect(route('dashboard'));
         }
         return view('login');
     }
 
     function registration(){
         if(Auth::check()){
-            return redirect(route('home'));
+            return redirect(route('dashboard'));
         }
         return view('registration');
     }
@@ -33,7 +33,7 @@ class AuthManager extends Controller
         $credentials = $request->only('email', 'password');
 
         if(Auth::attempt($credentials)){
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('dashboard'));
         }
         return redirect(route('login'))->with("error",'Login Details are not Valid');
     }
@@ -62,5 +62,10 @@ class AuthManager extends Controller
         Session::flash('logout_message', 'You have been logged out successfully.');
         Auth::logout();
         return redirect(route('login'));
+    }
+
+    function dashboard(){
+        
+        return view('welcome');
     }
 }
