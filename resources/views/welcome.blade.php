@@ -606,7 +606,7 @@
 			</nav>
 			<!-- partial -->
 
-	    @yield('admin')
+	    @yield('contain')
 
 
 			<!-- partial:partials/_footer.html -->
