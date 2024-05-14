@@ -64,8 +64,5 @@ class AuthManager extends Controller
         return redirect(route('login'));
     }
 
-    function dashboard(){
-        
-        return view('welcome');
-    }
+   
 }
