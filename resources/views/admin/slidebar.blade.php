@@ -13,45 +13,38 @@
         <ul class="nav">
           <li class="nav-item nav-category">Main</li>
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link">
+            <a href="{{route('dashboard')}}" class="nav-link">
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item nav-category">web apps</li>
+          <li class="nav-item nav-category">Register of Projects</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
               <i class="link-icon" data-feather="mail"></i>
-              <span class="link-title">Email</span>
+              <span class="link-title">Registration</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/email/inbox.html" class="nav-link">Inbox</a>
+                  <a href="pages/email/inbox.html" class="nav-link">Register</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Read</a>
+                  <a href="pages/email/read.html" class="nav-link">Details List Upates</a>
                 </li>
-                <li class="nav-item">
-                  <a href="pages/email/compose.html" class="nav-link">Compose</a>
-                </li>
+               
               </ul>
             </div>
           </li>
           <li class="nav-item">
             <a href="pages/apps/chat.html" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
-              <span class="link-title">Chat</span>
+              <span class="link-title">List of Projects</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="pages/apps/calendar.html" class="nav-link">
-              <i class="link-icon" data-feather="calendar"></i>
-              <span class="link-title">Calendar</span>
-            </a>
-          </li>
-          <li class="nav-item nav-category">Components</li>
+          
+          <!-- <li class="nav-item nav-category">Components</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
               <i class="link-icon" data-feather="feather"></i>
@@ -155,7 +148,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item"> -->
             <a class="nav-link" data-bs-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms">
               <i class="link-icon" data-feather="inbox"></i>
               <span class="link-title">Forms</span>
@@ -177,7 +170,7 @@
                 </li>
               </ul>
             </div>
-          </li>
+          <!-- </li>
           <li class="nav-item">
             <a class="nav-link"  data-bs-toggle="collapse" href="#charts" role="button" aria-expanded="false" aria-controls="charts">
               <i class="link-icon" data-feather="pie-chart"></i>
@@ -314,7 +307,7 @@
               <i class="link-icon" data-feather="hash"></i>
               <span class="link-title">Documentation</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
