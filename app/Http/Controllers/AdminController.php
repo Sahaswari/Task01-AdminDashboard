@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -11,7 +15,10 @@ class AdminController extends Controller
         return view('welcome');
     }
 
-    public function container(){
-        return view('contain');
+
+    public function adminlogout(){
+        Session::flash('logout_message', 'You have been logged out successfully.');
+        Auth::logout();
+        return redirect(route('login'));
     }
 }
