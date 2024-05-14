@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthManager;
+use App\Http\Controllers\ContainTypeController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,4 +19,6 @@ Route::get('/registration',  [AuthManager ::class, 'registration'])->name('regis
 Route::post('/registration',  [AuthManager ::class, 'registrationPost'])->name('registration.post');
 
 Route::get('/logout', [AuthManager ::class,'logout'])->name('logout');
+
+
 

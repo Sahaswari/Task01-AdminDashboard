@@ -28,7 +28,7 @@
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/email/inbox.html" class="nav-link">Register</a>
+                  <a href="{{route('createOption')}}" class="nav-link">Register</a>
                 </li>
                 <li class="nav-item">
                   <a href="pages/email/read.html" class="nav-link">Details List Upates</a>
@@ -38,7 +38,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="pages/apps/chat.html" class="nav-link">
+            <a href="{{route('viewOption')}}" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">List of Projects</span>
             </a>
