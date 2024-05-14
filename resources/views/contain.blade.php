@@ -1,5 +1,5 @@
-@extends('welcome')
-@section('admin')
+@extends('layout')
+@section('content')
 <div class="page-content">
 
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
