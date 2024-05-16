@@ -98,7 +98,7 @@
                 <td><span class="badge bg-danger">{{$item->status}}</span></td>
                 <td>
                   <a href="{{route('edit', $item->id)}}" class="btn btn-inverse-warning">Edit</a>
-                  <a href="" class="btn btn-inverse-danger">Delete</a>
+                  <a href="{{route('delete', $item->id)}}" id="delete" class="btn btn-inverse-danger">Delete</a>
                 </td>
               </tr>
               @endforeach

@@ -71,5 +71,17 @@ class ContainTypeController extends Controller
 
     }
 
+    public function deleteData($id){
+        ContainType::findOrFail($id)->delete();
+
+        $notification=array(
+        'message' =>'Project Details Deleted Successfully',
+        'alert-type' =>'success',
+    );
+
+    return redirect(route('viewProjectData'))->with($notification);
+
+    }
+
    
 }
