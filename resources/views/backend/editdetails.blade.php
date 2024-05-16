@@ -51,13 +51,10 @@
 
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
   <div>
-    <h4 class="mb-3 mb-md-0">Welcome to Project List Details</h4>
+    <h4 class="mb-3 mb-md-0">Welcome to Edit Project Details</h4>
   </div>
   <div class="d-flex align-items-center flex-wrap text-nowrap">
-    <button type="button" onclick="window.location='{{ route('addProject') }}'" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
-      
-      Add Project
-    </button>
+  
   </div>
 </div>
 
@@ -65,50 +62,36 @@
 
 
 <div class="row">
- 
-  <div class="col-lg-7 col-xl-8 stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <div class="d-flex justify-content-between align-items-baseline mb-2">
-          <h6 class="card-title mb-0">Projects</h6>
-          <div class="dropdown mb-2">
-           
-          </div>
-        </div>
-        <div class="table-responsive">
-          <table class="table table-hover mb-0">
-            <thead>
-              <tr>
-                <th class="pt-0">ID</th>
-                <th class="pt-0">Project Name</th>
-                <th class="pt-0">Project Type</th>
-                <th class="pt-0">Assign</th>
-                <th class="pt-0">Status</th>
-                <th class="pt-0">Action</th>
-      
-              </tr>
-            </thead>
-            <tbody>
-              @foreach($projects as $key => $item)
-              <tr>
-                <td>{{$key+1}}</td>
-                <td>{{$item->project_name}}</td>
-                <td>{{$item->project_type}}</td>
-                <td>{{$item->assign_name}}</td>
-                <td><span class="badge bg-danger">{{$item->status}}</span></td>
-                <td>
-                  <a href="{{route('edit', $item->id)}}" class="btn btn-inverse-warning">Edit</a>
-                  <a href="" class="btn btn-inverse-danger">Delete</a>
-                </td>
-              </tr>
-              @endforeach
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> 
-    </div>
-  </div>
+<div class="container">
+  <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+              <h6 class="card-title">Basic Edit Form</h6>
+								<form method='POST' action="{{route('storeData')}}" class="forms-sample">
+                  @csrf
+									<div class="mb-3">
+										<label for="exampleInputUsername1" class="form-label">Project Name</label>
+										<input type="text" class="form-control" value="{{$projects->project_name}}" name="InputProjectName" autocomplete="off" placeholder="Project Name">
+									</div>
+									<div class="mb-3">
+										<label for="exampleInputEmail1" class="form-label">Project Type</label>
+										<input type="text" class="form-control" value="{{$projects->project_type}}" name="InputProjectType" placeholder="Project Name">
+									</div>
+									<div class="mb-3">
+										<label for="exampleInputPassword1" class="form-label">Assign Name</label>
+										<input type="text" class="form-control" value="{{$projects->assign_name}} name="InputAssignName" autocomplete="off" placeholder="Assign Name">
+									</div>
+                  <div class="mb-3">
+									<label class="form-label">Type the status</label>
+									<input type="text" class="form-control" value="{{$projects->status}} name="Status" autocomplete="off" placeholder="Status">
+								</div>
+									<button type="submit" class="btn btn-primary me-2">Submit</button>
+									<button type="reset"  class="btn btn-secondary">Cancel</button>
+								</form>
+
+              </div>
+            </div>
+					</div>
 </div> <!-- row -->
 
 </div>

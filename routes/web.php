@@ -38,6 +38,10 @@ Route::group(['prefix' => 'ContainType'], function(){
   Route::post('/dashboard/addlist', [ContainTypeController::class, 'storeData'])->name('storeData');
 });
 
+Route::group(['prefix' => 'ContainType'], function(){
+  Route::get('/dashboard/edit/{id}', [ContainTypeController::class, 'editProject'])->name('edit');
+});
+
 // Route::group(['prefix' => 'ContainType'], function(){
 //   Route::get('/dashboard/addlist', [ContainTypeController::class, 'addButtonList'])->name('addButtonProject');
 // });

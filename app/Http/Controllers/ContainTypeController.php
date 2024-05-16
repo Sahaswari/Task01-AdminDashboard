@@ -45,4 +45,9 @@ class ContainTypeController extends Controller
         return redirect(route('viewProjectData'))->with($notification);
 
     }
+
+    public function editProject($id){
+        $projects = ContainType::findOrFail($id);
+        return view('backend.editdetails',compact('projects'));
+    }
 }
