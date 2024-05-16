@@ -97,27 +97,24 @@
                 <th class="pt-0">Project Type</th>
                 <th class="pt-0">Assign</th>
                 <th class="pt-0">Status</th>
+                <th class="pt-0">Action</th>
       
               </tr>
             </thead>
             <tbody>
+              @foreach($projects as $key => $item)
               <tr>
-                <td>1</td>
-                <td>NobleUI jQuery</td>
-                <td>01/01/2022</td>
-                <td>26/04/2022</td>
-                <td><span class="badge bg-danger">Released</span></td>
-                
+                <td>{{$key+1}}</td>
+                <td>{{$item->project_name}}</td>
+                <td>{{$item->project_type}}</td>
+                <td>{{$item->assign_name}}</td>
+                <td><span class="badge bg-danger">{{$item->status}}</span></td>
+                <td>
+                  <a href="" class="btn btn-inverse-warning">Edit</a>
+                  <a href="" class="btn btn-inverse-danger">Delete</a>
+                </td>
               </tr>
-             
-              </tr>
-              <tr>
-                <td class="border-bottom">3</td>
-                <td class="border-bottom">NobleUI EmberJs</td>
-                <td class="border-bottom">01/05/2022</td>
-                <td class="border-bottom">10/11/2022</td>
-                <td class="border-bottom"><span class="badge bg-info">Pending</span></td>
-              
+              @endforeach
               </tr>
             </tbody>
           </table>

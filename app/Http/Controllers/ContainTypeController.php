@@ -13,6 +13,7 @@ class ContainTypeController extends Controller
 {
     public function viewList(){
         
-        return view('backend.viewprojectlist');
+        $projects =ContainType::latest()->get();
+        return view('backend.viewprojectlist',compact('projects'));
     }
 }
