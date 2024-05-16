@@ -34,6 +34,14 @@ Route::group(['prefix' => 'ContainType'], function(){
   Route::get('/dashboard/addlist', [ContainTypeController::class, 'addList'])->name('addProject');
 });
 
+Route::group(['prefix' => 'ContainType'], function(){
+  Route::post('/dashboard/addlist', [ContainTypeController::class, 'storeData'])->name('storeData');
+});
+
+// Route::group(['prefix' => 'ContainType'], function(){
+//   Route::get('/dashboard/addlist', [ContainTypeController::class, 'addButtonList'])->name('addButtonProject');
+// });
+
 
 
 

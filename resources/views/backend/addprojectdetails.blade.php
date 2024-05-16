@@ -66,30 +66,27 @@
   <div class="col-md-6 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-
-								<form class="forms-sample">
+              <h6 class="card-title">Basic Form</h6>
+								<form method='POST' action="{{route('storeData')}}" class="forms-sample">
+                  @csrf
 									<div class="mb-3">
 										<label for="exampleInputUsername1" class="form-label">Project Name</label>
-										<input type="text" class="form-control" id="InputProjectName" autocomplete="off" placeholder="Project Name">
+										<input type="text" class="form-control" name="InputProjectName" autocomplete="off" placeholder="Project Name">
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label">Project Type</label>
-										<input type="text" class="form-control" id="InputProjectType" placeholder="Project Name">
+										<input type="text" class="form-control" name="InputProjectType" placeholder="Project Name">
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputPassword1" class="form-label">Assign Name</label>
-										<input type="text" class="form-control" id="InputAssignName" autocomplete="off" placeholder="Assign Name">
+										<input type="text" class="form-control" name="InputAssignName" autocomplete="off" placeholder="Assign Name">
 									</div>
                   <div class="mb-3">
-									<label class="form-label">Select the status</label>
-									<select class="form-select form-select-sm mb-3">
-										<option value="1">Basic</option>
-										<option value="2">Advanced</option>
-										<option value="3">High level</option>
-									</select>
+									<label class="form-label">Type the status</label>
+									<input type="text" class="form-control" name="Status" autocomplete="off" placeholder="Status">
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Submit</button>
-									<button class="btn btn-secondary">Cancel</button>
+									<button type="reset"  class="btn btn-secondary">Cancel</button>
 								</form>
 
               </div>

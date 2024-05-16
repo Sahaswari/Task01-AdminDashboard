@@ -54,7 +54,7 @@
     <h4 class="mb-3 mb-md-0">Welcome to Project List Details</h4>
   </div>
   <div class="d-flex align-items-center flex-wrap text-nowrap">
-    <button type="button" href="{{route('addProject')}}" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
+    <button type="button" onclick="window.location='{{ route('addProject') }}'" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
       
       Add Project
     </button>

@@ -20,4 +20,29 @@ class ContainTypeController extends Controller
     public function addList(){
         return view('backend.addprojectdetails');
     }
+
+    public function addButtonList(){
+        return view('backend.addprojectdetails');
+    }
+
+    public function storeData(Request $request){
+        $request->validate([
+            'project_name' => 'request|unique:contain_types',
+            'assign_name' => 'request',
+        ]);
+        ContainType::insert([
+            'project_name' =>$request->InputProjectName,
+            'project_type' =>$request->InputProjectType,
+            'assign_name' =>$request->InputAssignName,
+            'status' =>$request->Status
+
+        ]);
+
+        $notification = array(
+            'message' =>'Project Details Added Successfully',
+            'alert-type' =>'success',
+        );
+        return redirect(route('viewProjectData'))->with($notification);
+
+    }
 }
