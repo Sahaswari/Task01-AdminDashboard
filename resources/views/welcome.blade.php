@@ -17,11 +17,11 @@
   <!-- End fonts -->
 
 	<!-- core:css -->
-	<link rel="stylesheet" href="{{ asset('') }}../assets/vendors/core/core.css">
+	<link rel="stylesheet" href="{{ asset('../assets/vendors/core/core.css') }}">
 	<!-- endinject -->
 
 	<!-- Plugin css for this page -->
-	<link rel="stylesheet" href="{{ asset('') }}../assets/vendors/flatpickr/flatpickr.min.css">
+	<link rel="stylesheet" href="{{ asset('../assets/vendors/flatpickr/flatpickr.min.css') }}">
 	<!-- End plugin css for this page -->
 
 	<!-- inject:css -->
@@ -46,7 +46,8 @@
 		<div class="page-wrapper">
 					
 		@include('admin.adminheader')
-<div class="page-content">
+    <div class="page-content">
+
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
   <div>
     <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
@@ -463,11 +464,19 @@
 </div> <!-- row -->
 
 </div>
-    @yield('content')
 
 
 
-		@include('admin.adminfooter')
+
+
+
+</div>
+    
+    
+
+
+
+	
 		</div>
 	</div>
 

@@ -28,17 +28,17 @@
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="{{route('createOption')}}" class="nav-link">Register</a>
+                  <a href="{{route('viewProjectData')}}" class="nav-link">Details List View </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Details List Upates</a>
+                  <a href="pages/email/read.html" class="nav-link">Register</a>
                 </li>
                
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a href="{{route('viewOption')}}" class="nav-link">
+            <a href="pages/email/read.html" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">List of Projects</span>
             </a>
