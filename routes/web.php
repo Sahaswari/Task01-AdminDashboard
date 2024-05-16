@@ -42,6 +42,10 @@ Route::group(['prefix' => 'ContainType'], function(){
   Route::get('/dashboard/edit/{id}', [ContainTypeController::class, 'editProject'])->name('edit');
 });
 
+Route::group(['prefix' => 'ContainType'], function(){
+  Route::post('/dashboard/editlist', [ContainTypeController::class, 'editData'])->name('editData');
+});
+
 // Route::group(['prefix' => 'ContainType'], function(){
 //   Route::get('/dashboard/addlist', [ContainTypeController::class, 'addButtonList'])->name('addButtonProject');
 // });

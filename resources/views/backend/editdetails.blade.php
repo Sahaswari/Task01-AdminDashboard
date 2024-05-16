@@ -67,8 +67,9 @@
             <div class="card">
               <div class="card-body">
               <h6 class="card-title">Basic Edit Form</h6>
-								<form method='POST' action="{{route('storeData')}}" class="forms-sample">
+								<form method='POST' action="{{route('editData')}}" class="forms-sample">
                   @csrf
+                  <input type="hidden" name="id" value="{{$projects->id}}">
 									<div class="mb-3">
 										<label for="exampleInputUsername1" class="form-label">Project Name</label>
 										<input type="text" class="form-control" value="{{$projects->project_name}}" name="InputProjectName" autocomplete="off" placeholder="Project Name">
@@ -79,11 +80,11 @@
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputPassword1" class="form-label">Assign Name</label>
-										<input type="text" class="form-control" value="{{$projects->assign_name}} name="InputAssignName" autocomplete="off" placeholder="Assign Name">
+										<input type="text" class="form-control" value="{{$projects->assign_name}}" name="InputAssignName" autocomplete="off" placeholder="Assign Name">
 									</div>
                   <div class="mb-3">
 									<label class="form-label">Type the status</label>
-									<input type="text" class="form-control" value="{{$projects->status}} name="Status" autocomplete="off" placeholder="Status">
+									<input type="text" class="form-control" value="{{$projects->status}}" name="Status" autocomplete="off" placeholder="Status">
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Submit</button>
 									<button type="reset"  class="btn btn-secondary">Cancel</button>

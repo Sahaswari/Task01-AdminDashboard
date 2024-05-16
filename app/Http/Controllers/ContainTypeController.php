@@ -50,4 +50,26 @@ class ContainTypeController extends Controller
         $projects = ContainType::findOrFail($id);
         return view('backend.editdetails',compact('projects'));
     }
+
+    public function editData(Request $request){
+       
+        $pid = $request->id;
+
+        ContainType::findOrFail($pid)->update([
+            'project_name' =>$request->InputProjectName,
+            'project_type' =>$request->InputProjectType,
+            'assign_name' =>$request->InputAssignName,
+            'status' =>$request->Status
+
+        ]);
+
+        $notification = array(
+            'message' =>'Project Details Added Successfully',
+            'alert-type' =>'success',
+        );
+        return redirect(route('viewProjectData'))->with($notification);
+
+    }
+
+   
 }
