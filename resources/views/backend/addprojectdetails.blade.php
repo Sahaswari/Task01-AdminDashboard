@@ -54,10 +54,7 @@
     <h4 class="mb-3 mb-md-0">Welcome to Add Project Details</h4>
   </div>
   <div class="d-flex align-items-center flex-wrap text-nowrap">
-    <button type="button" href="{{route('addProject')}}" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
-      
-      Add Project
-    </button>
+  
   </div>
 </div>
 
@@ -65,7 +62,39 @@
 
 
 <div class="row">
+<div class="container">
+  <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
 
+								<form class="forms-sample">
+									<div class="mb-3">
+										<label for="exampleInputUsername1" class="form-label">Project Name</label>
+										<input type="text" class="form-control" id="InputProjectName" autocomplete="off" placeholder="Project Name">
+									</div>
+									<div class="mb-3">
+										<label for="exampleInputEmail1" class="form-label">Project Type</label>
+										<input type="text" class="form-control" id="InputProjectType" placeholder="Project Name">
+									</div>
+									<div class="mb-3">
+										<label for="exampleInputPassword1" class="form-label">Assign Name</label>
+										<input type="text" class="form-control" id="InputAssignName" autocomplete="off" placeholder="Assign Name">
+									</div>
+                  <div class="mb-3">
+									<label class="form-label">Select the status</label>
+									<select class="form-select form-select-sm mb-3">
+										<option value="1">Basic</option>
+										<option value="2">Advanced</option>
+										<option value="3">High level</option>
+									</select>
+								</div>
+									<button type="submit" class="btn btn-primary me-2">Submit</button>
+									<button class="btn btn-secondary">Cancel</button>
+								</form>
+
+              </div>
+            </div>
+					</div>
 </div> <!-- row -->
 
 </div>
