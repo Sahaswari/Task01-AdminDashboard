@@ -31,7 +31,7 @@
                   <a href="{{route('viewProjectData')}}" class="nav-link">Details List View </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Register</a>
+                  <a href="{{route('addProject')}}" class="nav-link">Register</a>
                 </li>
                
               </ul>

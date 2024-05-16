@@ -30,6 +30,12 @@ Route::group(['prefix' => 'ContainType'], function(){
   Route::get('/dashboard/list', [ContainTypeController::class, 'viewList'])->name('viewProjectData');
 });
 
+Route::group(['prefix' => 'ContainType'], function(){
+  Route::get('/dashboard/addlist', [ContainTypeController::class, 'addList'])->name('addProject');
+});
+
+
+
 
 
 

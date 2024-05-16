@@ -16,4 +16,8 @@ class ContainTypeController extends Controller
         $projects =ContainType::latest()->get();
         return view('backend.viewprojectlist',compact('projects'));
     }
+
+    public function addList(){
+        return view('backend.addprojectdetails');
+    }
 }
