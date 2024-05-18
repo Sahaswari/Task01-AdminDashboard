@@ -51,7 +51,7 @@
 
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
   <div>
-    <h4 class="mb-3 mb-md-0">Welcome to Add Project Details</h4>
+    <h4 class="mb-3 mb-md-0">Welcome to Add Project Manager Details</h4>
   </div>
   <div class="d-flex align-items-center flex-wrap text-nowrap">
   
@@ -70,20 +70,20 @@
 								<form method='POST' action="{{route('storeData')}}" class="forms-sample">
                   @csrf
 									<div class="mb-3">
-										<label for="exampleInputUsername1" class="form-label">Project Name</label>
-										<input type="text" class="form-control" name="InputProjectName" autocomplete="off" >
+										<label for="exampleInputUsername1" class="form-label">Project Manager ID</label>
+										<input type="text" class="form-control" name="InputManagerId" autocomplete="off" >
 									</div>
 									<div class="mb-3">
-										<label for="exampleInputEmail1" class="form-label">Project Type</label>
-										<input type="text" class="form-control" name="InputProjectType" >
+										<label for="exampleInputEmail1" class="form-label">Project Manager Name</label>
+										<input type="text" class="form-control" name="InputManagerName" >
 									</div>
 									<div class="mb-3">
-										<label for="exampleInputPassword1" class="form-label">Assign Name</label>
-										<input type="text" class="form-control" name="InputAssignName" autocomplete="off" >
+										<label for="exampleInputPassword1" class="form-label">Type of Project Manager</label>
+										<input type="date" class="form-control" name="InputManagerType" autocomplete="off" >
 									</div>
                   <div class="mb-3">
-									<label class="form-label">Type the status</label>
-									<input type="text" class="form-control" name="Status" autocomplete="off" >
+									<label class="form-label">Started Date of Working</label>
+									<input type="text" class="form-control" name="StartedDate" autocomplete="off" >
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Submit</button>
 									<button type="reset"  class="btn btn-secondary">Cancel</button>

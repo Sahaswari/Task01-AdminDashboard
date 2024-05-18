@@ -18,7 +18,7 @@
               <span class="link-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item nav-category">Register of Projects</li>
+          <li class="nav-item nav-category">Projects</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
               <i class="link-icon" data-feather="mail"></i>
@@ -38,10 +38,25 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="pages/email/read.html" class="nav-link">
-              <i class="link-icon" data-feather="message-square"></i>
-              <span class="link-title">List of Projects</span>
+          <li class="nav-item nav-category">Project Managers</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
+              <i class="link-icon" data-feather="mail"></i>
+              <span class="link-title">Registration Of Managers</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
+            <div class="collapse" id="emails">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="{{route('viewProjectData')}}" class="nav-link">Project Managers List View </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('addProject')}}" class="nav-link">Register Managers</a>
+                </li>
+               
+              </ul>
+            </div>
+          </li>
           </li>
           
           <!-- <li class="nav-item nav-category">Components</li>
