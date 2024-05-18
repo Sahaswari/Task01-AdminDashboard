@@ -17,23 +17,27 @@
   <!-- End fonts -->
 
 	<!-- core:css -->
-	<link rel="stylesheet" href="{{ asset('../assets/vendors/core/core.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/vendors/core/core.css') }}">
 	<!-- endinject -->
 
 	<!-- Plugin css for this page -->
-	<link rel="stylesheet" href="{{ asset('../assets/vendors/flatpickr/flatpickr.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/vendors/flatpickr/flatpickr.min.css') }}">
 	<!-- End plugin css for this page -->
 
 	<!-- inject:css -->
-	<link rel="stylesheet" href="{{ asset('../assets/fonts/feather-font/css/iconfont.css') }}">
-	<link rel="stylesheet" href="{{ asset('../assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/fonts/feather-font/css/iconfont.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
 	<!-- endinject -->
 
   <!-- Layout styles -->  
-	<link rel="stylesheet" href="{{ asset('../assets/css/demo2/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/demo2/style.css') }}">
   <!-- End layout styles -->
 
-  <link rel="shortcut icon" href="{{ asset('../assets/images/favicon.png') }}" />
+  <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
+  
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+     
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -82,7 +86,7 @@
                 <th class="pt-0">ID</th>
                 <th class="pt-0">Project Name</th>
                 <th class="pt-0">Project Type</th>
-                <th class="pt-0">Assign</th>
+                <th class="pt-0">Assign Name</th>
                 <th class="pt-0">Status</th>
                 <th class="pt-0">Action</th>
       
@@ -136,23 +140,24 @@
 	
 		</div>
 	</div>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="{{asset('assets/js/code/code.js')}}"></script>
 	<!-- core:js -->
-	<script src="{{asset('../assets/vendors/core/core.js')}}"></script>
+	<script src="{{asset('assets/vendors/core/core.js')}}"></script>
 	<!-- endinject -->
 
 	<!-- Plugin js for this page -->
-  <script src="{{asset('../assets/vendors/flatpickr/flatpickr.min.js')}}"></script>
-  <script src="{{asset('../assets/vendors/apexcharts/apexcharts.min.js')}}"></script>
+  <script src="{{asset('assets/vendors/flatpickr/flatpickr.min.js')}}"></script>
+  <script src="{{asset('assets/vendors/apexcharts/apexcharts.min.js')}}"></script>
 	<!-- End plugin js for this page -->
 
 	<!-- inject:js -->
-	<script src="{{asset('../assets/vendors/feather-icons/feather.min.js')}}"></script>
-	<script src="{{asset('../assets/js/template.js')}}"></script>
+	<script src="{{asset('assets/vendors/feather-icons/feather.min.js')}}"></script>
+	<script src="{{asset('assets/js/template.js')}}"></script>
 	<!-- endinject -->
 
 	<!-- Custom js for this page -->
-  <script src="{{asset('../assets/js/dashboard-dark.js')}}"></script>
+  <script src="{{asset('assets/js/dashboard-dark.js')}}"></script>
 	<!-- End custom js for this page -->
 
 </body>

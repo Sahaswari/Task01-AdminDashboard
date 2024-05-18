@@ -480,6 +480,8 @@
 		</div>
 	</div>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="{{asset('../assets/js/code/code.js')}}"></script>
 	<!-- core:js -->
 	<script src="{{asset('../assets/vendors/core/core.js')}}"></script>
 	<!-- endinject -->

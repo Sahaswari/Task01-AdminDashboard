@@ -86,7 +86,7 @@
 									<label class="form-label">Type the status</label>
 									<input type="text" class="form-control" value="{{$projects->status}}" name="Status" autocomplete="off" placeholder="Status">
 								</div>
-									<button type="submit" class="btn btn-primary me-2">Submit</button>
+									<button type="submit" class="btn btn-primary me-2">Update</button>
 									<button type="reset"  class="btn btn-secondary">Cancel</button>
 								</form>
 

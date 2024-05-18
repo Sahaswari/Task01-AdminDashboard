@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Session;
 //Route::get('/dashboard', [AdminController ::class, 'dashboard'])->name('dashboard');
 Route::post('/dashboard', [AdminController ::class, 'adminlogout'])->name('adminlogout');
 
-Route::get('/login', [AuthManager ::class, 'login'])->name('login');
+Route::get('/', [AuthManager ::class, 'login'])->name('login');
 Route::post('/login', [AuthManager ::class, 'loginPost'])->name('login.post');
 
 Route::get('/registration',  [AuthManager ::class, 'registration'])->name('registration');
