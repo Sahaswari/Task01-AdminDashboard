@@ -52,9 +52,9 @@ Route::group(['prefix' => 'ContainType'], function(){
   Route::get('/dashboard/deletelist{id}', [ContainTypeController::class, 'deleteData'])->name('delete');
 });
 
-// Route::group(['prefix' => 'ContainType'], function(){
-//   Route::get('/dashboard/addlist', [ContainTypeController::class, 'addButtonList'])->name('addButtonProject');
-// });
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::get('/dashboard/managerlist', [ProjectManagerController::class, 'managerList'])->name('viewProjectManagers');
+});
 
 
 

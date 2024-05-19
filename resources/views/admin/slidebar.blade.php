@@ -48,7 +48,7 @@
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="{{route('viewProjectData')}}" class="nav-link">Project Managers List View </a>
+                  <a href="{{route('viewProjectManagers')}}" class="nav-link">Project Managers List View </a>
                 </li>
                 <li class="nav-item">
                   <a href="{{route('addProject')}}" class="nav-link">Register Managers</a>
