@@ -79,11 +79,11 @@
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputPassword1" class="form-label">Type of Project Manager</label>
-										<input type="date" class="form-control" name="InputManagerType" autocomplete="off" >
+										<input type="text" class="form-control" name="InputManagerType" autocomplete="off" >
 									</div>
                   <div class="mb-3">
 									<label class="form-label">Started Date of Working</label>
-									<input type="text" class="form-control" name="StartedDate" autocomplete="off" >
+									<input type="date" class="form-control" name="StartedDate" autocomplete="off" >
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Submit</button>
 									<button type="reset"  class="btn btn-secondary">Cancel</button>

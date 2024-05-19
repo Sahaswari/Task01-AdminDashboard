@@ -27,6 +27,10 @@ Route::get('/logout', [AuthManager ::class,'logout'])->name('logout');
 
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
   
+
+
+
+
 //Project add type All route
 Route::group(['prefix' => 'ContainType'], function(){
   Route::get('/dashboard/list', [ContainTypeController::class, 'viewList'])->name('viewProjectData');
@@ -52,8 +56,16 @@ Route::group(['prefix' => 'ContainType'], function(){
   Route::get('/dashboard/deletelist{id}', [ContainTypeController::class, 'deleteData'])->name('delete');
 });
 
+
+
+
+
 Route::group(['prefix' => 'ProjectManager'], function(){
   Route::get('/dashboard/managerlist', [ProjectManagerController::class, 'managerList'])->name('viewProjectManagers');
+});
+
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::get('/dashboard/addmanager', [ProjectManagerController::class, 'addButtonList'])->name('addProjectManager');
 });
 
 

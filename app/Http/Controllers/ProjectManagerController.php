@@ -16,4 +16,8 @@ class ProjectManagerController extends Controller
         $managers =ProjectManager::latest()->get();
         return view('backend.viewManagerList',compact('managers'));
     }
+
+    public function addButtonList(){
+        return view('backend.addprojectmanager');
+    }
 }
