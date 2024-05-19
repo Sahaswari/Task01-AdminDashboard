@@ -23,8 +23,6 @@ Route::post('/registration',  [AuthManager ::class, 'registrationPost'])->name('
 Route::get('/logout', [AuthManager ::class,'logout'])->name('logout');
 
 //Admin group middleware
-
-
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
   
 
@@ -70,6 +68,10 @@ Route::group(['prefix' => 'ProjectManager'], function(){
 
 Route::group(['prefix' => 'ProjectManager'], function(){
   Route::get('/dashboard/addmanager', [ProjectManagerController::class, 'addmanagerList'])->name('addManager');
+});
+
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::post('/dashboard/addlist', [ProjectManagerController::class, 'storeManagerData'])->name('storeManagerData');
 });
 
 

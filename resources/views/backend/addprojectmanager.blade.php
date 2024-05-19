@@ -67,7 +67,7 @@
             <div class="card">
               <div class="card-body">
               <h6 class="card-title">Basic Form</h6>
-								<form method='POST' action="{{route('storeData')}}" class="forms-sample">
+								<form method='POST' action="{{route('storeManagerData')}}" class="forms-sample">
                   @csrf
 									<div class="mb-3">
 										<label for="exampleInputUsername1" class="form-label">Project Manager ID</label>

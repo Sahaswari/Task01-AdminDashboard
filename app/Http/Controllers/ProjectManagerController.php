@@ -24,4 +24,24 @@ class ProjectManagerController extends Controller
     public function addmanagerList(){
         return view('backend.addprojectmanager');
     }
+
+    public function storeManagerData(Request $request){
+        $request->validate([
+            'managerReg_id' => 'request|unique:project_managers'
+           
+        ]);
+        ProjectManager::insert([
+            'managerReg_id' =>$request->InputManagerId,
+            'manager_name' =>$request->InputManagerName,
+            'manager_type' =>$request->InputManagerType,
+            'started_date' =>$request->StartedDate
+        ]);
+
+        $notification = array(
+            'message' =>'Manager Details Added Successfully',
+            'alert-type' =>'success',
+        );
+        return redirect(route('viewProjectManagers'))->with($notification);
+
+    }
 }
