@@ -72,22 +72,23 @@
                   <input type="hidden" name="id" value="{{$managers->id}}">
 									<div class="mb-3">
 										<label for="exampleInputUsername1" class="form-label">Project Manager ID</label>
-										<input type="text" class="form-control" name="InputManagerId" autocomplete="off" >
+										<input type="text" class="form-control" value="{{$managers->managerReg_id}}" name="InputManagerId" autocomplete="off" >
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputEmail1" class="form-label">Project Manager Name</label>
-										<input type="text" class="form-control" name="InputManagerName" >
+										<input type="text" class="form-control" value="{{$managers->manager_name}}" name="InputManagerName" >
 									</div>
 									<div class="mb-3">
 										<label for="exampleInputPassword1" class="form-label">Type of Project Manager</label>
-										<input type="text" class="form-control" name="InputManagerType" autocomplete="off" >
+										<input type="text" class="form-control" value="{{$managers->manager_type}}" name="InputManagerType" autocomplete="off" >
 									</div>
                   <div class="mb-3">
 									<label class="form-label">Started Date of Working</label>
-									<input type="date" class="form-control" name="StartedDate" autocomplete="off" >
+									<input type="date" class="form-control" value="{{$managers->started_date}}" name="StartedDate" autocomplete="off" >
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Update</button>
-									<button type="reset"  class="btn btn-secondary">Cancel</button>
+									<button type="reset"  class="btn btn-secondary">Reset</button>
+									<button type="button" onclick="history.back()" class="btn btn-secondary">Back</button>
 								</form>
 
               </div>

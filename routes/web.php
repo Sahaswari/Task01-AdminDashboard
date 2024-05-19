@@ -75,7 +75,7 @@ Route::group(['prefix' => 'ProjectManager'], function(){
 });
 
 Route::group(['prefix' => 'ProjectManager'], function(){
-  Route::get('/dashboard/edit/{id}', [ContainTypeController::class, 'editProject'])->name('editManager');
+  Route::get('/dashboard/edit/{id}', [ProjectManagerController::class, 'editProject'])->name('editManager');
 });
 
 Route::group(['prefix' => 'ProjectManager'], function(){

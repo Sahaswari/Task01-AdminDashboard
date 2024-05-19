@@ -87,7 +87,8 @@
 									<input type="text" class="form-control" value="{{$projects->status}}" name="Status" autocomplete="off" placeholder="Status">
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Update</button>
-									<button type="reset"  class="btn btn-secondary">Cancel</button>
+									<button type="reset"  class="btn btn-secondary">Reset</button>
+									<button type="button" onclick="history.back()" class="btn btn-secondary">Back</button>
 								</form>
 
               </div>
