@@ -68,6 +68,10 @@ Route::group(['prefix' => 'ProjectManager'], function(){
   Route::get('/dashboard/addmanager', [ProjectManagerController::class, 'addButtonList'])->name('addProjectManager');
 });
 
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::get('/dashboard/addmanager', [ProjectManagerController::class, 'addmanagerList'])->name('addManager');
+});
+
 
 
 

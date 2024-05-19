@@ -20,4 +20,8 @@ class ProjectManagerController extends Controller
     public function addButtonList(){
         return view('backend.addprojectmanager');
     }
+
+    public function addmanagerList(){
+        return view('backend.addprojectmanager');
+    }
 }

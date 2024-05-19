@@ -51,7 +51,7 @@
                   <a href="{{route('viewProjectManagers')}}" class="nav-link">Project Managers List View </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{route('addProject')}}" class="nav-link">Register Managers</a>
+                  <a href="{{route('addManager')}}" class="nav-link">Register Managers</a>
                 </li>
                
               </ul>
