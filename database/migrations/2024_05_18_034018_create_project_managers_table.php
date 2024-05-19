@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('project_managers', function (Blueprint $table) {
-            $table->id();
+            $table->manager_id();
+            $table->string('managerReg_id');
+            $table->string('manager_name');
+            $table->string('manager_type');
+            $table->date('started_date');
             $table->timestamps();
         });
     }

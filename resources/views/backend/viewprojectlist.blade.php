@@ -86,6 +86,7 @@
                 <th class="pt-0">ID</th>
                 <th class="pt-0">Project Name</th>
                 <th class="pt-0">Project Type</th>
+                <th class="pt-0">Assign By</th>
                 <th class="pt-0">Assign Name</th>
                 <th class="pt-0">Status</th>
                 <th class="pt-0">Action</th>
@@ -98,6 +99,7 @@
                 <td>{{$key+1}}</td>
                 <td>{{$item->project_name}}</td>
                 <td>{{$item->project_type}}</td>
+                <td>{{ Auth::user()->name }}</td>
                 <td>{{$item->assign_name}}</td>
                 <td><span class="badge bg-danger">{{$item->status}}</span></td>
                 <td>

@@ -69,7 +69,7 @@
               <h6 class="card-title">Basic Edit Form</h6>
 								<form method='POST' action="{{route('editData')}}" class="forms-sample">
                   @csrf
-                  <input type="hidden" name="id" value="{{$projects->id}}">
+                  <input type="hidden" name="id" value="{{$projects->project_id}}">
 									<div class="mb-3">
 										<label for="exampleInputUsername1" class="form-label">Project Name</label>
 										<input type="text" class="form-control" value="{{$projects->project_name}}" name="InputProjectName" autocomplete="off" placeholder="Project Name">
