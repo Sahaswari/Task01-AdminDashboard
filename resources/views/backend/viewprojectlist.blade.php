@@ -73,7 +73,7 @@
   <div class="col-lg-7 col-xl-8 stretch-card">
     <div class="card">
       <div class="card-body">
-        <div class="d-flex justify-content-between align-items-baseline mb-2">
+        <div class="d-flex justify-content-between align-items-baseline mb-3">
           <h6 class="card-title mb-0">Projects</h6>
           <div class="dropdown mb-2">
            
@@ -99,7 +99,7 @@
                 <td>{{$key+1}}</td>
                 <td>{{$item->project_name}}</td>
                 <td>{{$item->project_type}}</td>
-                <td>{{ Auth::user()->name }}</td>
+                <td>{{$item->user->name}}</td>
                 <td>{{$item->assign_name}}</td>
                 <td><span class="badge bg-danger">{{$item->status}}</span></td>
                 <td>

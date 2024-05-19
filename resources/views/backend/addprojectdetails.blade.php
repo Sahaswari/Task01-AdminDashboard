@@ -85,7 +85,7 @@
 									<label class="form-label">Type the status</label>
 									<input type="text" class="form-control" name="Status" autocomplete="off" >
 								</div>
-									<button type="submit" class="btn btn-primary me-2">Submit</button>
+								<button type="submit" class="btn btn-primary me-2">Submit</button>
 									<button type="reset"  class="btn btn-secondary">Reset</button>
 									<button type="button" onclick="history.back()" class="btn btn-secondary">Back</button>
 								</form>

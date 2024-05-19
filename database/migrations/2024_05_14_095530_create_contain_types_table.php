@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('project_type')->nullable();
             $table->string('assign_name');
             $table->string('status');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Add this line
             $table->timestamps();
         });
     }
@@ -28,4 +29,6 @@ return new class extends Migration
     {
         Schema::dropIfExists('contain_types');
     }
+
+    
 };

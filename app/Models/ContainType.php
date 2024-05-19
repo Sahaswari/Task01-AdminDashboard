@@ -10,7 +10,8 @@ class ContainType extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function User(){
-        return $this->belongsTo(User :: class, 'id');
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

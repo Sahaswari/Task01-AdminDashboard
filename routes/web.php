@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Session;
 
 //Admin routes
 //Route::get('/dashboard', [AdminController ::class, 'dashboard'])->name('dashboard');
-Route::post('/dashboard', [AdminController ::class, 'adminlogout'])->name('adminlogout');
+Route::post('/dashboard/logout', [AdminController ::class, 'adminlogout'])->name('adminlogout');
 
 Route::get('/', [AuthManager ::class, 'login'])->name('login');
 Route::post('/login', [AuthManager ::class, 'loginPost'])->name('login.post');
 
 Route::get('/registration',  [AuthManager ::class, 'registration'])->name('registration');
-Route::post('/registration',  [AuthManager ::class, 'registrationPost'])->name('registration.post');
+Route::post('/registration/post',  [AuthManager ::class, 'registrationPost'])->name('registration.post');
 
 Route::get('/logout', [AuthManager ::class,'logout'])->name('logout');
 
@@ -39,7 +39,15 @@ Route::group(['prefix' => 'ContainType'], function(){
 });
 
 Route::group(['prefix' => 'ContainType'], function(){
-  Route::post('/dashboard/addlist', [ContainTypeController::class, 'storeData'])->name('storeData');
+  Route::post('/dashboard/addlist/storedata', [ContainTypeController::class, 'storeData'])->name('storeData');
+});
+
+Route::group(['prefix' => 'ContainType'], function(){
+  Route::post('/dashboard/addlist/store', [ContainTypeController::class, 'storeDataS'])->name('storeDataS');
+});
+
+Route::group(['prefix' => 'ContainType'], function(){
+  Route::get('/dashboard/index', [ContainTypeController::class, 'index'])->name('index');
 });
 
 Route::group(['prefix' => 'ContainType'], function(){

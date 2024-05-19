@@ -47,7 +47,8 @@ class User extends Authenticatable
         ];
     }
 
-    public function projects(){
-        return $this->hasMany(ContainType::class, 'id');
+    public function containTypes()
+    {
+        return $this->hasMany(ContainType::class);
     }
 }

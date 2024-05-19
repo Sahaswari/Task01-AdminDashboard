@@ -25,16 +25,27 @@ class ContainTypeController extends Controller
         return view('backend.addprojectdetails');
     }
 
+    public function index()
+    {
+        // Retrieve all contain types with their associated users
+        $projects = ContainType::with('user')->get();
+
+        return view('projects.index', compact('projects'));
+    }
+
     public function storeData(Request $request){
         $request->validate([
             'project_name' => 'request|unique:contain_types',
             'assign_name' => 'request',
+        
         ]);
         ContainType::insert([
             'project_name' =>$request->InputProjectName,
             'project_type' =>$request->InputProjectType,
             'assign_name' =>$request->InputAssignName,
-            'status' =>$request->Status
+            'status' =>$request->Status,
+            'user_id' => Auth::id() 
+            
 
         ]);
 
@@ -42,7 +53,10 @@ class ContainTypeController extends Controller
             'message' =>'Project Details Added Successfully',
             'alert-type' =>'success',
         );
-        return redirect(route('viewProjectData'))->with($notification);
+    
+        return redirect()->route('viewProjectData')->with($notification);
+
+
 
     }
 
@@ -80,6 +94,30 @@ class ContainTypeController extends Controller
     );
 
     return redirect(route('viewProjectData'))->with($notification);
+
+    }
+
+    public function storeDataS(Request $request){
+        $request->validate([
+            'project_name' => 'request|unique:contain_types',
+            'assign_name' => 'request'
+        ]);
+        ContainType::insert([
+            'project_name' =>$request->InputProjectName,
+            'project_type' =>$request->InputProjectType,
+            'assign_name' =>$request->InputAssignName,
+            'status' =>$request->Status,
+            'user_id' => Auth::id() 
+            
+
+        ]);
+
+        $notification = array(
+            'message' =>'Project Details Added Successfully',
+            'alert-type' =>'success',
+        );
+        return redirect()->route('viewProjectData')->with($notification);
+
 
     }
 
