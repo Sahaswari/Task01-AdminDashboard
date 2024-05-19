@@ -44,4 +44,41 @@ class ProjectManagerController extends Controller
         return redirect(route('viewProjectManagers'))->with($notification);
 
     }
+
+    public function editProject($id){
+        $managers = ProjectManager::findOrFail($id);
+        return view('backend.editmanagerdetails',compact('managers'));
+    }
+
+    public function editData(Request $request){
+       
+        $pid = $request->id;
+
+        ProjectManager::findOrFail($pid)->update([
+            'managerReg_id' =>$request->InputManagerId,
+            'manager_name' =>$request->InputManagerName,
+            'manager_type' =>$request->InputManagerType,
+            'started_date' =>$request->StartedDate
+
+        ]);
+
+        $notification = array(
+            'message' =>'Project Manager Details Updated Successfully',
+            'alert-type' =>'success',
+        );
+        return redirect(route('viewProjectManagers'))->with($notification);
+
+    }
+
+    public function deleteData($id){
+        ProjectManager::findOrFail($id)->delete();
+
+        $notification=array(
+        'message' =>'Project Manager Details Deleted Successfully',
+        'alert-type' =>'success',
+    );
+
+    return redirect(route('viewProjectManagers'))->with($notification);
+
+    }
 }

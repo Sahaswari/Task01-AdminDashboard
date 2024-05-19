@@ -51,7 +51,7 @@
 
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
   <div>
-    <h4 class="mb-3 mb-md-0">Welcome to Edit Project Details</h4>
+    <h4 class="mb-3 mb-md-0">Welcome to Edit Project Manager Details</h4>
   </div>
   <div class="d-flex align-items-center flex-wrap text-nowrap">
   
@@ -66,25 +66,25 @@
   <div class="col-md-6 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-              <h6 class="card-title">Basic Edit Form</h6>
-								<form method='POST' action="{{route('editData')}}" class="forms-sample">
+              <h6 class="card-title">Basic Form</h6>
+              <form method='POST' action="{{route('editDataManager')}}" class="forms-sample">
                   @csrf
-                  <input type="hidden" name="id" value="{{$projects->id}}">
+                  <input type="hidden" name="id" value="{{$managers->id}}">
 									<div class="mb-3">
-										<label for="exampleInputUsername1" class="form-label">Project Name</label>
-										<input type="text" class="form-control" value="{{$projects->project_name}}" name="InputProjectName" autocomplete="off" placeholder="Project Name">
+										<label for="exampleInputUsername1" class="form-label">Project Manager ID</label>
+										<input type="text" class="form-control" name="InputManagerId" autocomplete="off" >
 									</div>
 									<div class="mb-3">
-										<label for="exampleInputEmail1" class="form-label">Project Type</label>
-										<input type="text" class="form-control" value="{{$projects->project_type}}" name="InputProjectType" placeholder="Project Name">
+										<label for="exampleInputEmail1" class="form-label">Project Manager Name</label>
+										<input type="text" class="form-control" name="InputManagerName" >
 									</div>
 									<div class="mb-3">
-										<label for="exampleInputPassword1" class="form-label">Assign Name</label>
-										<input type="text" class="form-control" value="{{$projects->assign_name}}" name="InputAssignName" autocomplete="off" placeholder="Assign Name">
+										<label for="exampleInputPassword1" class="form-label">Type of Project Manager</label>
+										<input type="text" class="form-control" name="InputManagerType" autocomplete="off" >
 									</div>
                   <div class="mb-3">
-									<label class="form-label">Type the status</label>
-									<input type="text" class="form-control" value="{{$projects->status}}" name="Status" autocomplete="off" placeholder="Status">
+									<label class="form-label">Started Date of Working</label>
+									<input type="date" class="form-control" name="StartedDate" autocomplete="off" >
 								</div>
 									<button type="submit" class="btn btn-primary me-2">Update</button>
 									<button type="reset"  class="btn btn-secondary">Cancel</button>

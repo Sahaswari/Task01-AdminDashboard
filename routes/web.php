@@ -71,10 +71,20 @@ Route::group(['prefix' => 'ProjectManager'], function(){
 });
 
 Route::group(['prefix' => 'ProjectManager'], function(){
-  Route::post('/dashboard/addlist', [ProjectManagerController::class, 'storeManagerData'])->name('storeManagerData');
+  Route::post('/dashboard/addmanagerlist', [ProjectManagerController::class, 'storeManagerData'])->name('storeManagerData');
 });
 
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::get('/dashboard/edit/{id}', [ContainTypeController::class, 'editProject'])->name('editManager');
+});
 
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::post('/dashboard/editmanagerlist', [ProjectManagerController::class, 'editData'])->name('editDataManager');
+});
+
+Route::group(['prefix' => 'ProjectManager'], function(){
+  Route::get('/dashboard/deletemanagerlist{id}', [ProjectManagerController::class, 'deleteData'])->name('deleteManager');
+});
 
 
 
