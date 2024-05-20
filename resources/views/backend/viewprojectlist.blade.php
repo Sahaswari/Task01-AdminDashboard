@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="table-responsive">
-          <table class="table table-hover mb-0">
+          <table class="table table-hover mb-0" width="100%" style="table-layout: fixed;">
             <thead>
               <tr>
                 <th class="pt-0">ID</th>
